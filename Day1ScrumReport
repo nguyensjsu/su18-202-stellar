@@ -1,0 +1,18 @@
+Day1
+What did the team do the past day (07/22/2018)?
+Anjana Kamath: I spent time researching on the best framework to use. Researched on MVC pattern and decided to go ahead with it as it is asynchronous and it provides multiple views.
+Vidya: Researched on Firebase and MySQL databases and data models. Found MySQL to be apt for developing our app.
+Anjana Eldo: Researched on various components that has to be implemented for Starbucks application. Decided on these five components - Authentication, Orders, Add Cards, Payments, Store Location.
+Mudrita: Researched on various UI frameworks and cloud providers.The optimal solution I found for implementing starbucks project was Java API framework for Android. Also chose AWS as our cloud provider. 
+Team has decided to use Spring MVC pattern to implement backend APIs.
+For hosting APIs in cloud, team has decided to go with AWS cloud provider.
+Five components to implement in this sprint includes Authentication, Orders, Add Cards, Payment and Store.
+For database storage, team has decided to use AWS MYSQL.
+For UI, team has decided to develop mobile app for Android using JAVA API framework.
+
+
+What is the team going to do next day?
+Anjana Kamath: I will work on designing the workflow for authentication APIs.
+Vidya: I will work on deciding and designing on the workflow of manage orders and how it will be dependent on other components.
+Anjana Eldo: I will work on deciding the workflow of add cards and store the details into DB.Also will work on how location API can be implemented.
+Mudrita: I will work on setting up the initial framework for building APIs using Java Spring. Also come up with workflow for payment API.
