@@ -1,0 +1,11 @@
+Define Communication under consideration of XP?
+Of the five values in Extreme Programming, communication plays an essential role in understanding project information, setting priorities, transferring knowledge and accomplishing tasks, used throughout project development..
+
+Day 1
+
+MOM: Meeting 1
+Team has decided to use Spring MVC pattern to implement backend APIs.
+For hosting APIs in cloud, team has decided to go with AWS cloud provider.
+Five components to implement in this sprint includes Authentication, Orders, Add Cards, Payment and Store.
+For database storage, team has decided to use AWS MYSQL.
+For UI, team has decided to develop mobile app for Android using JAVA API framework.
