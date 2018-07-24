@@ -1,0 +1,27 @@
+package org.CMPE202.starbucks.service.impl;
+
+
+import org.CMPE202.starbucks.dao.impl.StoreDaoImpl;
+import org.CMPE202.starbucks.model.Store;
+import org.CMPE202.starbucks.responseVo.StoreReponseVo;
+import org.CMPE202.starbucks.service.IStoreService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class StoreServiceImpl implements IStoreService{
+
+    @Autowired
+    private StoreDaoImpl storeDao;
+
+    public StoreReponseVo getAllStores() {
+        List<Store> storeList =  storeDao.viewStores();
+
+        StoreReponseVo storeReponseVo = new StoreReponseVo();
+        storeReponseVo.getStores().addAll(storeList);
+
+        return storeReponseVo;
+    }
+}
