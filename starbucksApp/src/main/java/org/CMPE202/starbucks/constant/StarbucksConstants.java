@@ -37,6 +37,7 @@ public class StarbucksConstants {
     public static final String ALLSTORES="/allstores";
     public static final String ADD_NEW_CARD="/addnewcard";
     public static final String VIEW_ALL_CARDS="/viewallcards";
+    public static final String MAKE_PAYMENT="/makepayment";
 
 
 
