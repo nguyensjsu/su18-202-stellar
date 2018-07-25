@@ -2,7 +2,6 @@ package org.CMPE202.starbucks.responseVo;
 
 import org.CMPE202.starbucks.model.Store;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
