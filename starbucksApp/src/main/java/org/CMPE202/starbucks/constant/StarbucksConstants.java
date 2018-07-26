@@ -42,6 +42,7 @@ public class StarbucksConstants {
     public static final String MAKE_PAYMENT="/makepayment";
     public static final String ALL_ITEMS="/allitems";
     public static final String ITEM ="/item";
+    public static final String LOG_OUT ="/logout";
    
 
 
