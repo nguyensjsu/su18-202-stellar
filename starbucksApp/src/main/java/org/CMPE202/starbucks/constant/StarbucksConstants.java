@@ -40,6 +40,8 @@ public class StarbucksConstants {
     public static final String SET_DEFAULT_CARD="/setdefaultcard";
     public static final String VIEW_CARD_DETAILS="/viewcarddetails";
     public static final String MAKE_PAYMENT="/makepayment";
+    public static final String ALL_ITEMS="/allitems";
+    public static final String ITEM ="/item";
    
 
 
