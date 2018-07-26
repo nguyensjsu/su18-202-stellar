@@ -41,15 +41,18 @@ public class CardDaoImpl implements ICardDao {
 	
 	@Override
     public String addCard(Card card) {
-        
-		if (clearDefaultCard(card.getUserId()) == "success") {
+        String str ="success";
+		if(card.getIsDefault()){
+			str=clearDefaultCard(card.getUserId());
+		}
+		if (str == "success") {
 			
 			
 			String sqlquery = "INSERT INTO CARD(" + "cardId," + "cardNumber," + "securityCode," + "balance," + "userId,"
 					+ "isDefault) " + "VALUES (?,?,?,?,?,?)";
 
 			Object[] parameters = new Object[] { card.getCardId(), card.getCardNumber(), card.getSecurityCode(),
-					card.getBalance(), card.getUserId(), card.getIsDefault() };
+					card.getBalance(), card.getUserId(),card.getIsDefault() };
 			try {
 				
 				jdbcTemplate.update(sqlquery, parameters);
@@ -64,7 +67,7 @@ public class CardDaoImpl implements ICardDao {
 	
 	public String clearDefaultCard(String userId){
 		
-		String sqlQuery = "UPDATE CARD set isDefault = 0 where userId = " + userId;
+		String sqlQuery = "UPDATE CARD set isDefault = FALSE where userId = '" + userId+"'";
 		
 		try{
 			
@@ -82,7 +85,7 @@ public class CardDaoImpl implements ICardDao {
     public String setDefaultCard(String cardNumber , String userId) {
         
     	if(clearDefaultCard(userId) == "success"){
-    	String sqlQuery = "Update CARD set isDefault = 1 where cardNumber = "+ cardNumber + 
+    	String sqlQuery = "Update CARD set isDefault = TRUE where cardNumber = "+ cardNumber + 
     			" and userId = " + userId;
     	try{
 			
@@ -101,7 +104,8 @@ public class CardDaoImpl implements ICardDao {
     	
     	String sqlQuery = "SELECT "
     			+ "cardNumber,"
-    			+ "balance "
+    			+ "balance, "
+				+ "isDefault "
     			+ "from "
     			+ "CARD "
     			+ "where "
@@ -119,6 +123,7 @@ public class CardDaoImpl implements ICardDao {
     			        	Card cardResult = new Card();
     			        	cardResult.setCardNumber(rs.getString(1));
     			        	cardResult.setBalance(rs.getDouble(2));
+							cardResult.setIsDefault(rs.getBoolean(3));
     			            return cardResult;
     			        }
     			       

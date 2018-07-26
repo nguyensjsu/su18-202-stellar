@@ -8,6 +8,7 @@ import org.CMPE202.starbucks.constant.StarbucksConstants;
 import org.CMPE202.starbucks.controller.ICardController;
 import org.CMPE202.starbucks.model.Card;
 import org.CMPE202.starbucks.responseVo.CardResponseVo;
+import org.CMPE202.starbucks.responseVo.GenericResponseVo;
 import org.CMPE202.starbucks.service.impl.CardServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,7 +27,7 @@ public class CardController implements ICardController {
     
     @RequestMapping(value= StarbucksConstants.ADD_NEW_CARD, method= RequestMethod.POST)
     public @ResponseBody
-    String addCard(@RequestBody Card card){
+    GenericResponseVo addCard(@RequestBody Card card){
     	
     			return cardService.addCard(card);
     			

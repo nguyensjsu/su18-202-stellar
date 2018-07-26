@@ -7,7 +7,7 @@ public class Card {
 	private String cardId;
 	private double balance;
 	private String userId;
-	private int isDefault;
+	private boolean isDefault;
 	
 	public Card(){
 		
@@ -44,10 +44,10 @@ public class Card {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	public int getIsDefault() {
+	public boolean getIsDefault() {
 		return isDefault;
 	}
-	public void setIsDefault(int isDefault) {
+	public void setIsDefault(boolean isDefault) {
 		this.isDefault = isDefault;
 	}
 	public Card(String cardNumber, String securityCode){

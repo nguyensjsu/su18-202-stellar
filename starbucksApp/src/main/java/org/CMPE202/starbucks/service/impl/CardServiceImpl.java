@@ -1,14 +1,12 @@
 package org.CMPE202.starbucks.service.impl;
 
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
 
 import org.CMPE202.starbucks.dao.impl.CardDaoImpl;
 import org.CMPE202.starbucks.model.Card;
-import org.CMPE202.starbucks.responseVo.CardResponseVo;
+import org.CMPE202.starbucks.responseVo.GenericResponseVo;
 import org.CMPE202.starbucks.service.ICardService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,14 +17,15 @@ public class CardServiceImpl implements ICardService {
 	@Autowired
 	private CardDaoImpl cardDao;
 
-	public String addCard(Card card){
-		
+	public GenericResponseVo addCard(Card card){
+
+		GenericResponseVo genericResponseVo = new GenericResponseVo();
 		String uniqueCardID = UUID.randomUUID().toString();
         card.setCardId(uniqueCardID);
-        card.setIsDefault(1);
+//        card.setIsDefault(1);
         card.setBalance(25.00);
-
-        return cardDao.addCard(card);
+		genericResponseVo.setMessage(cardDao.addCard(card));
+        return genericResponseVo;
 	}
 	
 	 public List<Card> viewAllCards(Card card) {
