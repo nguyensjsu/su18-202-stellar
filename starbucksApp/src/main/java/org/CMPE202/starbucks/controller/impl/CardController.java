@@ -49,6 +49,7 @@ public class CardController implements ICardController {
     @RequestMapping(value= StarbucksConstants.VIEW_CARD_DETAILS, method= RequestMethod.POST)
     public @ResponseBody
     Card viewCardDetails (@RequestBody Card card){
+    	System.out.println("Card in controller " + card.getCardNumber());
         return cardService.viewCardDetails(card);
 
     }

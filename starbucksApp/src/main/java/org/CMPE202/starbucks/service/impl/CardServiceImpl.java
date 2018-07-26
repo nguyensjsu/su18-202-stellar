@@ -52,7 +52,7 @@ public class CardServiceImpl implements ICardService {
 	 }
 	 
 	 public Card viewCardDetails(Card card){
-		 
+		 System.out.println("Card in service " + card.getCardNumber());
 		 return cardDao.viewCardDetails(card.getCardNumber());
 	 }
 	 

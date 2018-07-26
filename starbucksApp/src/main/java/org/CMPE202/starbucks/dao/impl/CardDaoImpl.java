@@ -3,6 +3,7 @@ package org.CMPE202.starbucks.dao.impl;
 import org.CMPE202.starbucks.dao.ICardDao;
 import org.CMPE202.starbucks.model.Card;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Component;
@@ -138,7 +139,8 @@ public class CardDaoImpl implements ICardDao {
     	
     	try{
     		
-    		Card card = jdbcTemplate.queryForObject(sqlQuery, Card.class);
+    		Card card = (Card) jdbcTemplate.queryForObject(sqlQuery, new BeanPropertyRowMapper(Card.class));
+    		System.out.println("Card++" + card);
     		return card;
     		
     	}catch(Exception e){
