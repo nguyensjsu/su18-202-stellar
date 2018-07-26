@@ -9,7 +9,7 @@ import org.CMPE202.starbucks.model.Card;
 public class CardResponseVo{
 
 	 String cardNumber;
-	 String securityCode;
+	 Double balance;
    
 	List<Card> allcards = new ArrayList<>();
 	
@@ -19,12 +19,28 @@ public class CardResponseVo{
     }
 
     public void setCardDetails(String cardNumber,String securityCode) {
-        Card card = new Card(cardNumber,securityCode);
-        allcards.add(card);
+//        Card card = new Card(cardNumber,securityCode);
+        //allcards.add(card);
         
     }
 
-    @Override
+    public Double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(Double balance) {
+		this.balance = balance;
+	}
+
+	public String getCardNumber() {
+		return cardNumber;
+	}
+
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+
+	@Override
     public String toString() {
         return "CardResponseVo{" +
                 "allcards=" + allcards +
