@@ -24,7 +24,7 @@ public class StoreController implements IStoreController{
 
     @RequestMapping(value= StarbucksConstants.ALLSTORES, method= RequestMethod.GET)
     public @ResponseBody
-    StoreReponseVo getAllStores () {
+    List<Store> getAllStores () {
 
         return storeService.getAllStores();
 
