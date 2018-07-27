@@ -43,6 +43,9 @@ public class StarbucksConstants {
     public static final String ALL_ITEMS="/allitems";
     public static final String ITEM ="/item";
     public static final String LOG_OUT ="/logout";
+	public static final String CART ="/cart";
+    public static final String ADD_TO_CART="/addtocart";
+    public static final String VIEW_CART="/viewcart";
    
 
 
