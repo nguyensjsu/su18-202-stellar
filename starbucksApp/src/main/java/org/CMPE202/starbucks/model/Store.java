@@ -4,6 +4,10 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 public class Store {
 
+    String storeName;
+
+    String storeAddress;
+
     public String getStoreName() {
         return storeName;
     }
@@ -20,8 +24,7 @@ public class Store {
         this.storeAddress = storeAddress;
     }
 
-    String storeName;
-    String storeAddress;
+
 
     public Store(String name, String address){
         this.storeName=name;

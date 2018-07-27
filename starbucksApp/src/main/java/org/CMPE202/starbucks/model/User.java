@@ -5,28 +5,28 @@ import java.io.Serializable;
 public class User implements Serializable{
 	private static final long serialVersionUID = -7788619177798333712L;
 	private String userID;
-	private String firstname;
-	private String lastname;
+	private String userName;
+	//private String lastname;
 	private String createdDate;
-	private String modifiedDate;
-	private String password;
-	private String confirmPassword;
+	//private String modifiedDate;
+	private String userPin;
+	//private String confirmPassword;
 
-	public String getConfirmPassword() {
+	/*public String getConfirmPassword() {
 		return confirmPassword;
 	}
 
 	public void setConfirmPassword(String confirmPassword) {
 		this.confirmPassword = confirmPassword;
+	}*/
+
+
+	public String getPin() {
+		return userPin;
 	}
 
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPin(String userPin) {
+		this.userPin = userPin;
 	}
 	public String getUserID() {
 		return userID;
@@ -34,30 +34,30 @@ public class User implements Serializable{
 	public void setUserID(String userID) {
 		this.userID = userID;
 	}
-	public String getFirstname() {
-		return firstname;
+	public String getUsername() {
+		return userName;
 	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setUsername(String firstname) {
+		this.userName = userName;
 	}
-	public String getLastname() {
+	/*public String getLastname() {
 		return lastname;
 	}
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
-	}
+	}*/
 	public String getCreatedDate() {
 		return createdDate;
 	}
 	public void setCreatedDate(String createdDate) {
 		this.createdDate = createdDate;
 	}
-	public String getModifiedDate() {
+	/*public String getModifiedDate() {
 		return modifiedDate;
 	}
 	public void setModifiedDate(String modifiedDate) {
 		this.modifiedDate = modifiedDate;
-	}
+	}*/
 	
 
 }

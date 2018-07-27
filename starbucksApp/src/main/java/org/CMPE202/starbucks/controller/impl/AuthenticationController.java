@@ -12,25 +12,12 @@ import static org.CMPE202.starbucks.constant.StarbucksConstants.*;
 public class AuthenticationController  implements IAuthenticationController{
 
     @Autowired
-    private StoreServiceImpl storeService;
+    private AuthenticationServiceImpl authService;
 
-    @RequestMapping(value= StarbucksConstants.AUTHENTICATE_USER, method=RequestMethod.GET)
-    public @ResponseBody String getAllFiles () {
+    @RequestMapping(value= StarbucksConstants.AUTHENTICATE_USER, method=RequestMethod.POST)
+    public @ResponseBody String authenticateUser (@RequestBody User user) {
 
+    	return authservice.authenticateUser(user);
 
-        return null;
-
-          //"Authentication API";
     }
-
-
-
-//    @RequestMapping(value=VIEW_USER_FILE_URL, method=RequestMethod.POST)
-//    public @ResponseBody
-//    List<File> getFiles (@RequestBody User user) {
-////        List<File> filesForUser = fileService.getFilesByUserID(user.getUserID());
-//        return filesForUser;
-//    }
-
-
 }

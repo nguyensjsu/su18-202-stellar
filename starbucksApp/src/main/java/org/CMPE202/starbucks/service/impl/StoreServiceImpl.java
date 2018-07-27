@@ -16,12 +16,12 @@ public class StoreServiceImpl implements IStoreService{
     @Autowired
     private StoreDaoImpl storeDao;
 
-    public StoreReponseVo getAllStores() {
+    public List<Store> getAllStores() {
         List<Store> storeList =  storeDao.viewStores();
 
-        StoreReponseVo storeReponseVo = new StoreReponseVo();
-        storeReponseVo.getStores().addAll(storeList);
+        /*StoreReponseVo storeReponseVo = new StoreReponseVo();
+        storeReponseVo.getStores().addAll(storeList);*/
 
-        return storeReponseVo;
+        return storeList;
     }
 }
