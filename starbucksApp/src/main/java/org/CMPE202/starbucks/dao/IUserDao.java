@@ -1,8 +1,11 @@
 package org.CMPE202.starbucks.dao;
 
 import org.CMPE202.starbucks.model.User;
+import org.CMPE202.starbucks.model.UserSession;
+
+import javax.servlet.http.HttpServletRequest;
 
 public interface IUserDao {
 
-    public String authenticateUser(User user);
+    public UserSession authenticateAndCreateSession(HttpServletRequest httpServletRequest, User user);
 }
