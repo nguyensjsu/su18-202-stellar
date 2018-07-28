@@ -3,6 +3,7 @@ package org.CMPE202.starbucks.service.impl;
 import org.CMPE202.starbucks.dao.impl.PaymentDaoImpl;
 import org.CMPE202.starbucks.model.Payment;
 import org.CMPE202.starbucks.model.Store;
+import org.CMPE202.starbucks.responseVo.GenericResponseVo;
 import org.CMPE202.starbucks.responseVo.StoreReponseVo;
 import org.CMPE202.starbucks.service.IPaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,13 +18,15 @@ public class PaymentServiceImpl implements IPaymentService {
     @Autowired
     private PaymentDaoImpl paymentDao;
 
-    public String makePayment(Payment payment) {
+    public GenericResponseVo makePayment(Payment payment) {
 
         String uniqueID = UUID.randomUUID().toString();
         payment.setPaymentId(uniqueID);
         payment.setPaymentSuccessful(true);
 
-        return paymentDao.makePayment(payment);
+        GenericResponseVo genericResponseVo = new GenericResponseVo();
+        genericResponseVo.setMessage(paymentDao.makePayment(payment));
+        return genericResponseVo;
 
     }
 
