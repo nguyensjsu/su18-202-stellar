@@ -16,6 +16,13 @@ Team Members - Anjana Eldo, Anjana Kamath, Mudrita Chaturvedi, Vidya Coimbatore 
         • Link to your team's Project Journal (on GitHub) - https://github.com/nguyensjsu/su18-202-stellar/blob/master/XPCoreValues-Communication
         • Link to your team's Google Sprint Task Sheet - https://drive.google.com/file/d/15FNUplI05PNW0B8b8Wsb0ud1Qpa8E0_P/view
         
+The project implements MVC design pattern.
+#### Model 
+Model specifies the strcuture of the application. A domain notifies its views whenever the model changes.
+#### View 
+View represents the UI strcuture of the application. 
+#### Controller 
+Controller provides an interface between the model and views.
         
 ## Component Diagram
 ![alt text](diagrams/componentDiagram.jpeg "this is the Component Diagram")
