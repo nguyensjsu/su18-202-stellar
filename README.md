@@ -18,7 +18,10 @@ Team Members - Anjana Eldo, Anjana Kamath, Mudrita Chaturvedi, Vidya Coimbatore 
         
         
 ## Component Diagram
-![alt text](ComponentDiagram.jpeg "this is the Component Diagram")
+![alt text](diagrams/componentDiagram.jpeg "this is the Component Diagram")
             
-## Deployment Diagram
-![alt text](Deploymentdiagram.jpeg "this is the Deployment diagram")
+## EC2 Deployment Diagram
+![alt text](diagrams/cloudDeployment.jpeg "this is the Deployment diagram")
+
+## UI Wireframes Diagram
+![alt text](diagrams/uiframes.jpeg "UI screens")
