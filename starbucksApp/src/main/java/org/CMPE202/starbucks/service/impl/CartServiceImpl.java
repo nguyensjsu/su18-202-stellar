@@ -3,6 +3,7 @@ package org.CMPE202.starbucks.service.impl;
 import org.CMPE202.starbucks.dao.impl.CartDaoImpl;
 import org.CMPE202.starbucks.model.Cart;
 import org.CMPE202.starbucks.model.CartItems;
+import org.CMPE202.starbucks.responseVo.GenericResponseVo;
 import org.CMPE202.starbucks.service.ICartService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,11 +17,12 @@ public class CartServiceImpl implements ICartService {
     private CartDaoImpl cartDao;
     private Cart cart;
 
-    public String addToCart(Cart cart){
+    public GenericResponseVo addToCart(Cart cart){
         //String uniqueCardID = UUID.randomUUID().toString();
+        GenericResponseVo genericResponseVo = new GenericResponseVo();
         cart.setUserId("test@gmail.com");
-
-        return cartDao.addToCart(cart);
+        genericResponseVo.setMessage(cartDao.addToCart(cart));
+        return genericResponseVo;
 
     }
 
