@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/mycart_menu"
+        android:title="My Cart"
+        android:icon="@drawable/ic_cart_24dp"
+        />
+
+    <item
+        android:id="@+id/shop_menu"
+        android:title="Shop"
+        />
+
+    <item
+        android:id="@+id/orders_menu"
+        android:title="My Orders"
+        />
+
+    <item
+        android:id="@+id/payments_menu"
+        android:title="Payment"
+        />
+
+    <item
+        android:id="@+id/store_menu"
+        android:title="Store"
+        />
+</menu>

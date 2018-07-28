@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemDetailActivity"
+    android:layout_margin="50dp">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="500dp"
+        android:layout_height="300dp"
+        android:src="@drawable/mochaa"/>
+
+    <TextView
+        android:id="@+id/itemname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LATTE"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/img"
+        android:textSize="24dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/itemprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price: $4.00"
+        android:layout_below="@+id/itemname"/>
+
+    <TextView
+        android:id="@+id/quantitytxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Quantity"
+        android:layout_below="@id/itemprice"/>
+
+    <Spinner
+        android:id="@+id/quantity"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/quantitytxt"
+        android:layout_alignParentEnd="true"
+        android:entries="@array/array_name" />
+    
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" ADD TO CART "
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/quantity"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:onClick="addtocart"/>
+
+</RelativeLayout>

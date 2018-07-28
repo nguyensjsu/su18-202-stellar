@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.starbucks.cmpe202.starbucksmobileapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.StoreActivity"
+            android:label="@string/stores"/>
+        <activity android:name=".activity.MenuActivity" />
+        <activity android:name=".ItemDetailActivity"
+            android:label="@string/item_detail"/>
+        <activity android:name=".activity.ViewCartActivity"
+            android:label="@string/cart"/>
+        <activity android:name=".activity.CheckoutActivity"
+            android:label="@string/checkout"/>
+        <activity android:name=".activity.PaymentActivity"
+            android:label="@string/checkout"/>
+        <activity android:name=".activity.AddCardActivity"
+            android:label="@string/add_card"/>
+        <activity android:name=".activity.ViewCardActivity"
+            android:label="@string/view_card"/>
+        <activity android:name=".activity.ViewOrdersActivity"
+            android:label="@string/view_order"></activity>
+    </application>
+
+</manifest>

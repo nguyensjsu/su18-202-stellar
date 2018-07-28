@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MenuActivity"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/teamenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tea"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18dp"/>
+
+
+    <ImageView
+        android:id="@+id/item1"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@drawable/icedtea"
+        android:layout_below="@+id/teamenu"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/item2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/teamenu"
+        android:src="@drawable/starbucksacai"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/coffeemenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Coffee"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/item1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18dp"/>
+
+    <ImageView
+        android:id="@+id/item3"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/latte"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/item4"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/mochaa"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/item5"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/item6"
+        android:src="@drawable/cuppuccino1"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/item6"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="19dp"
+        android:src="@drawable/hotchoco"
+        android:clickable="true"/>
+
+
+</RelativeLayout>

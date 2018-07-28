@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PaymentActivity"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/totaltxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total:"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:id="@+id/totalval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/totaltxt"
+        android:text="$10.00"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/pay_btn"
+        android:layout_marginLeft="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay "
+        android:layout_toRightOf="@+id/totalval"
+        android:background="@color/orderList"
+        android:textColor="@android:color/white"
+        android:onClick="payment"/>
+
+    <TextView
+        android:id="@+id/cardnumberPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Card Number: 1234567889"
+        android:layout_below="@+id/totalval"
+        />
+
+    <TextView
+        android:id="@+id/info2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Another Card:"
+        android:layout_below="@+id/cardnumberPay"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <ListView
+        android:id="@+id/cardList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info2"
+        android:layout_centerHorizontal="true"></ListView>
+
+</RelativeLayout>

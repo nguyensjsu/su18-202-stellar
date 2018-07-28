@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CheckoutActivity"
+    android:layout_margin="20dp">
+
+    <TextView
+        android:id="@+id/total_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: $10.00"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/pay_btn"
+        android:layout_marginLeft="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay Now"
+        android:layout_toRightOf="@+id/total_id"
+        android:layout_alignParentRight="true"
+        android:background="@color/orderList"
+        android:textColor="@android:color/white"
+        android:onClick="paynow"/>
+
+    <TextView
+        android:id="@+id/ordersummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Summary:"
+        android:layout_below="@+id/pay_btn"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <ListView
+        android:id="@+id/cartList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ordersummary"
+        android:layout_centerHorizontal="true"></ListView>
+
+
+</RelativeLayout>

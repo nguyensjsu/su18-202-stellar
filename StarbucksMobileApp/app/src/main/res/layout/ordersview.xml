@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/orderid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="orderid"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/date_txt"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/orderid"
+        android:layout_height="wrap_content"
+        android:text="Date: "/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/date_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_toRightOf="@+id/date_txt"
+        android:layout_alignBaseline="@+id/date_txt"
+        android:text="MM/DD/YYYY"/>
+
+    <TextView
+        android:id="@+id/amount_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_txt"
+        android:layout_alignLeft="@+id/date_txt"
+        android:layout_marginBottom="20dp"
+        android:text="Amount Paid: "/>
+    <TextView
+        android:id="@+id/amount_val"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_txt"
+        android:layout_alignRight="@+id/date_val"
+        android:layout_marginBottom="20dp"
+        android:text="$0.00"
+        android:textColor="@color/orderList" />
+
+</RelativeLayout>

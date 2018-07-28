@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity"
+    android:layout_margin="20dp">
+
+    <ImageView
+        android:id="@+id/starbucks_icon"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/starbucksicon"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/userID_txtvw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/starbucks_icon"
+        android:layout_marginTop="10dp"
+        android:text="User ID"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"/>
+
+    <EditText
+        android:id="@+id/userID_edttxt"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="user@gmail.com"
+        android:layout_alignBaseline="@+id/userID_txtvw"
+        android:layout_toRightOf="@+id/userID_txtvw"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/userPIN_txtvw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User PIN"
+        android:layout_marginTop="20dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/userID_txtvw"/>
+
+    <EditText
+        android:id="@+id/userPIN_edttxt"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/userPIN_txtvw"
+        android:layout_alignLeft="@+id/userID_edttxt"
+        android:layout_alignBaseline="@+id/userPIN_txtvw"
+        android:hint="XXXX"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOGIN"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/userPIN_txtvw"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:onClick="login"/>
+
+    <TextView
+        android:id="@+id/message_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_btn"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_red_dark"/>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Starbucks</string>
+    <string name="add_card">Add Card</string>
+    <string name="view_card">My Cards</string>
+    <string name="view_order">My Orders</string>
+    <string name="stores">Stores</string>
+    <string name="item_detail">Item Details</string>
+    <string name="cart">MY Cart</string>
+    <string name="checkout">Place Order</string>
+
+    <string-array name="array_name">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+</resources>
