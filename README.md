@@ -18,9 +18,9 @@ Team Members - Anjana Eldo, Anjana Kamath, Mudrita Chaturvedi, Vidya Coimbatore 
         
 The project implements MVC design pattern.
 #### Model 
-Model specifies the strcuture of the application. A domain notifies its views whenever the model changes.
+Model specifies the structure of the application. A domain notifies its views whenever the model changes.
 #### View 
-View represents the UI strcuture of the application. 
+View represents the UI structure of the application. 
 #### Controller 
 Controller provides an interface between the model and views.
         
