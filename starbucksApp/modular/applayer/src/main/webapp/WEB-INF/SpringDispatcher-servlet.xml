@@ -1,0 +1,36 @@
+<beans xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:mvn="http://www.springframework.org/schema/mvc"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+    <mvc:default-servlet-handler/>
+    <mvc:annotation-driven/>
+
+    <context:component-scan base-package="org.CMPE202.starbucks.*"/>
+    <context:property-placeholder location="classpath:database.properties"/>
+
+
+    <bean id="corsFilter" class="org.CMPE202.starbucks.controllerlayer.filter.CorsFilter"/>
+
+
+    <mvn:interceptors>
+        <bean class="org.CMPE202.starbucks.controllerlayer.interceptors.HttpRequestInterceptor"/>
+    </mvn:interceptors>
+
+    <bean id="dataSource"
+          class="org.apache.commons.dbcp.BasicDataSource">
+        <!-- class="org.springframework.jdbc.datasource.DriverManagerDataSource"> -->
+        <property name="driverClassName" value="${driver-class-name}"/>
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+    </bean>
+
+
+</beans>
